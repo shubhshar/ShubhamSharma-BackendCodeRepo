@@ -1,10 +1,12 @@
 require('dotenv').config();
 const express =  require("express")
 const axios = require("axios")
+const cors = require('cors')
 const { response } = require("express")
 
 const app =  express()
 const port = process.env.APP_PORT || 5000
+app.use(cors())
 
 app.get('/mySpaceXData',async(req,res)=>{
   try{
