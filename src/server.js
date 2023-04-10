@@ -9,7 +9,7 @@ const app =  express()
 const port = process.env.APP_PORT || 5000
 app.use(cors())
 
-router.get('/',async(req,res)=>{
+router.get('/mySpaceXData',async(req,res)=>{
   try{
     const response = await axios.get("https://api.spacexdata.com/v4/capsules");
     res.json(response.data)
