@@ -19,7 +19,7 @@ router.get('/',async(req,res)=>{
   }
 });
 
-app.use('/.netlify/src/server', router);
+app.use('/.netlify/functions/server', router);
 
 app.listen(port,()=>{
   console.log("Server up and running at:",port)
