@@ -3,8 +3,10 @@ const express =  require("express")
 const axios = require("axios")
 const cors = require('cors')
 const { response } = require("express")
+const serverless = require("serverless-http")
 
 const app =  express()
+
 const port = process.env.APP_PORT || 5000
 app.use(cors())
 
@@ -21,3 +23,5 @@ app.get('/mySpaceXData',async(req,res)=>{
 app.listen(port,()=>{
   console.log("Server up and running at:",port)
 })
+
+module.exports.handler = serverless(app)
