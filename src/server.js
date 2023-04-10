@@ -7,11 +7,12 @@ const { response } = require("express")
 const router = express.Router();
 const app =  express()
 const port = process.env.APP_PORT || 5000
+
 app.use(cors())
 
 router.get('/mySpaceXData',async(req,res)=>{
   try{
-    const response = await axios.get("https://api.spacexdata.com/v4/capsules");
+    const response = await axios.get('https://api.spacexdata.com/v4/capsules');
     res.json(response.data)
   }catch(error){
     console.log(error)
@@ -19,7 +20,7 @@ router.get('/mySpaceXData',async(req,res)=>{
   }
 });
 
-app.use('/.netlify/functions/server', router);
+app.use('/.netlify/src/server', router);
 
 app.listen(port,()=>{
   console.log("Server up and running at:",port)
