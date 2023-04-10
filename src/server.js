@@ -6,7 +6,7 @@ const cors = require('cors')
 const { response } = require("express")
 const router = express.Router();
 const app =  express()
-const port = process.env.APP_PORT || 5000
+const port = "https://incandescent-sunshine-13b75b.netlify.app/"
 
 app.use(cors())
 
