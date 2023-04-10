@@ -10,7 +10,7 @@ const port = "https://incandescent-sunshine-13b75b.netlify.app/"
 
 app.use(cors())
 
-router.get('/mySpaceXData',async(req,res)=>{
+router.get('/myspacexdata',async(req,res)=>{
   try{
     const response = await axios.get('https://api.spacexdata.com/v4/capsules');
     res.json(response.data)
