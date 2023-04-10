@@ -15,7 +15,7 @@ router.get('/mySpaceXData',async(req,res)=>{
     res.json(response.data)
   }catch(error){
     console.log(error)
-    res.status(500).json({message:"Internal server error"})
+    res.status(500).json({message:"Internal server error has occurred"})
   }
 });
 
