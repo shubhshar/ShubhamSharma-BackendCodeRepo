@@ -19,7 +19,7 @@ router.get('/mySpaceXData',async(req,res)=>{
   }
 });
 
-app.use('/api', router);
+app.use(`/.netlify/functions/api`, router);
 
 app.listen(port,()=>{
   console.log("Server up and running at:",port)
